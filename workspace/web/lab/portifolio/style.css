@@ -1,7 +1,11 @@
+body {
+    margin:0;
+    padding: 0;
+}
+
 .header{
     background-color: #3e3c3c;
     color:azure;
-    border-radius: 4px;
     display: flex;
     justify-content: space-between;
 
@@ -10,10 +14,9 @@
 .header-logo {
     color: rgb(187, 184, 182);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
     margin: 5px;
     padding: 10px;
-    border-radius: 2 px;
+    border-radius: 2px;
     display: flex;
     justify-content: space-between;
 
@@ -23,27 +26,25 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: medium;
     font-weight: 100;
-    justify-content: space-between;
-    border-radius: 5px;
-    text-align: center;
+    justify-content: space-evenly;
+    width: 100%;
     padding-left: 20px;
     margin: 10px;
     display: flex;
-    gap: 20px ;
 }
-
 
 .body{
-    background-color: 1CA1A19;
-    display: flex;
+    background-color: #1C1A19 ;
+    display : flex;
     justify-content: space-between;
-    border-radius: 5px;
+    flex-direction: row;
 }
+
 .body-header-text{
     background-color: #1C1A19;
     color: #F55800;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 56 px;
+    font-size: 56px;
     display: flex;
     flex-direction: column;
 }
@@ -74,7 +75,7 @@
 .About-header-text{
     color:#F55800;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 56 px;
+    font-size: 56px;
     display: flex;
 
 }
@@ -90,19 +91,29 @@
 
 .skills {
     background-color: #1C1A19;
-    color: white;
+    color:#F55800;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: space-between;
     border-radius: 5px;
     flex-direction: column;
 }
+
+.skills h3{
+    font-size: 56px;
+}
 .skills-card {
     background-color: #1C1A19;
     color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
     display: flex;
     flex-direction: column ;
     justify-content: center;
+}
+.skills-card h2{
+    font-size: 40px;
+    color: #F55800;
 }
 
 .contact {
@@ -110,11 +121,8 @@
     font-weight: bold;
     font-size: 30px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    /* display: flex; */
-    /* flex-direction: row; */
-
-
 }
+
 .contact button{
     background-color : #F55800;
     color:white ;
@@ -162,4 +170,148 @@ textarea {
     font-weight: bold;
     cursor: pointer;
 
+}
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  background-color: #1c1a19;
+  padding: 40px 0;
+  flex-wrap: wrap;
+}
+.hero-image img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #F55800;
+  background: #fff;
+}
+.hero-content {
+  color: #fff;
+  max-width: 500px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.hero-content h3 {
+  color: #F55800;
+  font-size: 2.5rem;
+  margin: 0 0 10px 0;
+}
+.hero-content p {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+@media (max-width: 800px) {
+  .hero-section {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  .hero-image img {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+.hero-main {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  background: #1c1a19;
+  padding: 60px 0 60px 0;
+  gap: 0;
+}
+.hero-left {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex: 1 1 0;
+  max-width: 700px;
+  padding-left: 60px;
+}
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-right: 32px;
+  margin-top: 8px;
+}
+.social-icons img {
+  width: 26px;
+  height: 26px;
+  filter: grayscale(1) brightness(1.7);
+  transition: filter 0.2s;
+}
+.social-icons img:hover {
+  filter: none;
+}
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0 0 18px 0;
+  line-height: 1.1;
+}
+.orange {
+  color: #F55800;
+}
+.subtitle {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+.hero-desc {
+  color: #ccc;
+  font-size: 1.05rem;
+  max-width: 410px;
+}
+.hero-right {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 60px;
+}
+.hero-illustration {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 1100px) {
+  .hero-main {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+  }
+  .hero-left, .hero-right {
+    padding: 0;
+    max-width: 100%;
+    justify-content: center;
+  }
+  .hero-right {
+    margin-top: 30px;
+    justify-content: center;
+  }
+}
+@media (max-width: 700px) {
+  .hero-main {
+    padding: 20px 0;
+  }
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  .hero-illustration {
+    max-width: 220px;
+  }
+  .social-icons img {
+    width: 20px;
+    height: 20px;
+  }
 }
